@@ -50,10 +50,6 @@ git commit -m "<your_commit_message>"
 git push -u origin <your_branch_name>
 ```
 
-**8.** Create a [PR](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) !
-
-
-
 ## Run on Local System
 
 
