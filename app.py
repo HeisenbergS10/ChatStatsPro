@@ -46,30 +46,9 @@ filename = st.sidebar.file_uploader("", type=["txt"])
 st.sidebar.markdown("**Don't worry your data is not stored!**")
 st.sidebar.markdown("**feel free to use 😊.**")
 
-# =========================================================
-
-# Select feature for txt file {Way 2}
-
-# def file_selector(folder_path='.'):
-#     filenames = os.listdir(folder_path)
-#     selected_filename = st.sidebar.selectbox('Select a file', filenames)
-#     return os.path.join(folder_path, selected_filename)
-
-# filename = file_selector()
-# st.sidebar.markdown('You selected {}'.format(filename))
-
-# Check file format
-# if not filename.endswith('.txt'):
-#     st.error("Please upload only text file!")
-#     st.sidebar.error("Please upload only text file!")
-# else:
-
-# ===========================================================
 if filename is not None:
 
-    # Loading files into data as a DataFrame
-    # filename = ("./Chat.txt")
-    # @st.cache(persist=True, allow_output_mutation=True) # https://docs.streamlit.io/library/advanced-features/caching#:~:text=st.cache_data%C2%A0is%20the%20recommended%20way%20to%20cache%20computations%20that%20return%20data%3A%20loading%20a%20DataFrame%20from%20CSV%2C
+   
     @st.cache_data
     def load_data(date_format=date_format):
 
@@ -99,8 +78,7 @@ if filename is not None:
 
         if st.sidebar.checkbox("Show raw data", True):
             st.write(data)
-        # ------------------------------------------------
-
+        
         # Members name involve in Chart
         st.sidebar.markdown("### To Analyze select")
         names = analysis.authors_name(data)
@@ -194,7 +172,7 @@ if filename is not None:
                 st.error("It seems that something is wrong! Try Again. Error Type: {}".format(
                     e.__name__))
 
-        # --------------------------------------------------
+    
 
     except:
         e = sys.exc_info()
