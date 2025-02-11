@@ -14,7 +14,7 @@ Click on the <a href="https://github.com/HeisenbergS10/ChatStatsPro"><img src="h
 **2.** Clone the forked repository.
 
 ```bash
-git clone https://github.com/<your-github-username>/ChatStatsPro
+git clone https://github.com/HeisenbergS10/ChatStatsPro
 ```
 
 **3.** Navigate to the project directory.
